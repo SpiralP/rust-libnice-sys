@@ -41,8 +41,6 @@ fn main() {
         // Pseudo TCP Socket implementation
         .whitelist_function("pseudo_tcp_.+")
         .whitelist_type("_?PseudoTcp.+")
-        // Disable recursive whitelisting, we're using libc, glib-sys, etc.
-        .whitelist_recursively(false)
         .clang_args(
             libnice
                 .include_paths
